@@ -39,6 +39,15 @@ module.exports = {
                       'file-loader'
                 ]
             },
+            /*{                
+                test: /\.js$/,
+                enforce: "pre",
+                exclude: /node_modules/,
+                loader: "eslint-loader",
+                options: {
+                    configFile: path.resolve(__dirname, '.eslintrc')
+                  }
+            },*/
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
