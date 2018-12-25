@@ -16,6 +16,7 @@ module.exports = {
     devServer: {
       contentBase: path.resolve(__dirname, 'dist'),
       index: 'index.html',
+      open: true,
       port:9000
     },
     devtool: 'inline-source-map',    

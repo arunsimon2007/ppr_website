@@ -3,15 +3,6 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
-const webpack = require('webpack');
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const config = require('./webpack.config.js');
-const compiler = webpack(config);
-
-app.use(webpackDevMiddleware(compiler, {
-    publicPath: config.output.publicPath
-  }));
-
 app.use('/images',express.static('images'));
 
 app.get('/',(req, res) =>{
