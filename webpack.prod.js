@@ -27,12 +27,12 @@ module.exports = {
         test: /\.(png|jpg)$/i,
         use: ["file-loader"]
       },
-      {
+      /* {
         enforce: "pre",
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "eslint-loader"
-      },
+      },*/
       {
         test: /\.js$/,
         exclude: /node_modules/,
