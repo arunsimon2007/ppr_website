@@ -1,7 +1,6 @@
 const path = require("path");
-const webpack = require("webpack");
+// const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const APP_DIR = path.join(__dirname, "/public/src/");
@@ -18,12 +17,14 @@ module.exports = {
   output: {
     filename: "[name].bundle[hash].js",
     path: BUILD_DIR,
-    publicPath: ""
+    publicPath: "/"
   },
   devServer: {
     contentBase: BUILD_DIR,
     index: "index.html",
     open: true,
+    disableHostCheck: true,
+    historyApiFallback: true,
     port: 9000
   },
   devtool: "inline-source-map",
