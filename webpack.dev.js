@@ -1,4 +1,5 @@
 const path = require("path");
+require("dotenv").config();
 // const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -7,6 +8,9 @@ const APP_DIR = path.join(__dirname, "/public/src/");
 const BUILD_DIR = path.resolve(__dirname, "dist");
 
 const VENDOR_LIBS = ["react", "react-dom"];
+
+const { DEV_SERVER_PORT } = process.env;
+
 module.exports = {
   mode: "development",
 
@@ -25,7 +29,7 @@ module.exports = {
     open: true,
     disableHostCheck: true,
     historyApiFallback: true,
-    port: 9000
+    port: DEV_SERVER_PORT || 9000
   },
   devtool: "inline-source-map",
   module: {

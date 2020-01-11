@@ -1,7 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { Component, Fragment } from "react";
-import ReactDom from "react-dom";
+
+import { render } from "react-dom";
+import { Provider } from "react-redux";
 import Routers from "./router";
+import configureStore from "./redux/store";
 
 import "./app.scss";
 class App extends Component {
@@ -14,4 +17,9 @@ class App extends Component {
   }
 }
 
-ReactDom.render(<App />, document.getElementById("app"));
+render(
+  <Provider store={configureStore()}>
+    <App />
+  </Provider>,
+  document.getElementById("app")
+);
