@@ -6,7 +6,6 @@ import rootReducer from "./root-reducer";
 import rootEpic from "./root-epic";
 
 const epicMiddleware = createEpicMiddleware();
-
 const middlewares = [epicMiddleware];
 
 export default function configureStore() {

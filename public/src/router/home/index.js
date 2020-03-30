@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 import React from "react";
-export default () => <div>Home Page...</div>;
+ const Home = () =>  (<div>Home Page...</div>)
+ export default Home;

@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
 import React, { Component, Fragment } from "react";
-
 import { render } from "react-dom";
 import { Provider } from "react-redux";
 import Routers from "./router";
