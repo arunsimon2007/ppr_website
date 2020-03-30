@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
-
-import React from "react";
-export default () => <div>Social Page...</div>;
+import React from "react"
+const Social = () => <div>Social Page...</div>
+export default Social

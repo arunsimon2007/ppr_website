@@ -1,8 +1,8 @@
-import * as types from "./types";
+import * as types from "./types"
 
 const initialState = {
   displaySpinner: false
-};
+}
 
 const spinnerReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -10,15 +10,15 @@ const spinnerReducer = (state = initialState, action) => {
       return {
         ...state,
         displaySpinner: true
-      };
+      }
     case types.HIDE_SPINNER:
       return {
         ...state,
         displaySpinner: false
-      };
+      }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default spinnerReducer;
+export default spinnerReducer

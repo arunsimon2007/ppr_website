@@ -1,12 +1,9 @@
-import { mapTo } from "rxjs/operators";
-import { ofType } from "redux-observable";
+import { mapTo } from "rxjs/operators"
+import { ofType } from "redux-observable"
 
-import * as types from "./types";
+import * as types from "./types"
 
 const spinnerEpic = action$ =>
-  action$.pipe(
-    ofType(types.SHOW_SPINNER),
-    mapTo({ type: types.HIDE_SPINNER })
-  );
+  action$.pipe(ofType(types.SHOW_SPINNER), mapTo({ type: types.HIDE_SPINNER }))
 
-export default spinnerEpic;
+export default spinnerEpic

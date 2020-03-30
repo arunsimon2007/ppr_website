@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
-
-import React from "react";
-export default () => <div>Contact Page...</div>;
+import React from "react"
+const Contact = () => <div>Contact Page...</div>
+export default Contact

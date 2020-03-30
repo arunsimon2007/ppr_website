@@ -1,5 +1,5 @@
-import { combineReducers } from "redux";
+import { combineReducers } from "redux"
 
-import { spinnerReducer } from "./spinner/index";
+import { spinnerReducer } from "./spinner/index"
 
-export default combineReducers({ spinner: spinnerReducer });
+export default combineReducers({ spinner: spinnerReducer })

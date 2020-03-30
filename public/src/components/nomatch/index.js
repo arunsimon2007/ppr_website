@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
-
-import React from "react";
-export default () => <div>404 Error page</div>;
+import React from "react"
+const NoMatch = () => <div>404 Error page</div>
+export default NoMatch
