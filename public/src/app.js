@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import { Provider } from "react-redux";
 import RouterConfig from "./router";
 import configureStore from "./redux/store";
+//require ("../../public/favicon.ico")
 
 import "./app.scss";
 class App extends Component {

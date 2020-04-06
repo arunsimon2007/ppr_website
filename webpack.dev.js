@@ -1,15 +1,15 @@
-const path = require("path");
-require("dotenv").config();
-// const webpack = require("webpack");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path")
+require("dotenv").config()
+const CleanWebpackPlugin = require("clean-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const CopyPlugin = require("copy-webpack-plugin")
 
-const APP_DIR = path.join(__dirname, "/public/src/");
-const BUILD_DIR = path.resolve(__dirname, "dist");
+const APP_DIR = path.join(__dirname, "/public/src/")
+const BUILD_DIR = path.resolve(__dirname, "dist")
 
-const VENDOR_LIBS = ["react", "react-dom"];
+const VENDOR_LIBS = ["react", "react-dom"]
 
-const { DEV_SERVER_PORT } = process.env;
+const { DEV_SERVER_PORT } = process.env
 
 module.exports = {
   mode: "development",
@@ -99,6 +99,7 @@ module.exports = {
     new CleanWebpackPlugin(["dist"]),
     new HtmlWebpackPlugin({
       template: "./public/index.html"
-    })
+    }),
+    new CopyPlugin([{ from: "./public/favicon.ico", to: BUILD_DIR }])
   ]
-};
+}
