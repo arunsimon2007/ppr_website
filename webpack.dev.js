@@ -16,12 +16,12 @@ module.exports = {
 
   entry: {
     app: APP_DIR + "/app.js",
-    vendor: VENDOR_LIBS
+    vendor: VENDOR_LIBS,
   },
   output: {
     filename: "[name].bundle[hash].js",
     path: BUILD_DIR,
-    publicPath: "/"
+    publicPath: "/",
   },
   devServer: {
     contentBase: BUILD_DIR,
@@ -29,22 +29,22 @@ module.exports = {
     open: true,
     disableHostCheck: true,
     historyApiFallback: true,
-    port: DEV_SERVER_PORT || 9000
+    port: DEV_SERVER_PORT || 9000,
   },
   devtool: "inline-source-map",
   module: {
     rules: [
       {
-        test: /\.css/,
-        use: ["style-loader", "css-loader"]
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.(png|jpg|svg)$/i,
-        use: ["file-loader"]
+        use: ["file-loader"],
       },
       /*{
         test: /\.js$/,
@@ -64,12 +64,12 @@ module.exports = {
             presets: ["@babel/preset-env"],
             plugins: [
               "@babel/plugin-proposal-object-rest-spread",
-              "transform-class-properties"
-            ]
-          }
-        }
-      }
-    ]
+              "transform-class-properties",
+            ],
+          },
+        },
+      },
+    ],
   },
   optimization: {
     splitChunks: {
@@ -85,21 +85,21 @@ module.exports = {
       cacheGroups: {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
-          priority: -10
+          priority: -10,
         },
         default: {
           minChunks: 2,
           priority: -20,
-          reuseExistingChunk: true
-        }
-      }
-    }
+          reuseExistingChunk: true,
+        },
+      },
+    },
   },
   plugins: [
     new CleanWebpackPlugin(["dist"]),
     new HtmlWebpackPlugin({
-      template: "./public/index.html"
+      template: "./public/index.html",
     }),
-    new CopyPlugin([{ from: "./public/favicon.ico", to: BUILD_DIR }])
-  ]
+    new CopyPlugin([{ from: "./public/favicon.ico", to: BUILD_DIR }]),
+  ],
 }

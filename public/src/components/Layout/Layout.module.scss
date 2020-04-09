@@ -1,0 +1,12 @@
+.appLayout {
+  position: relative;
+  padding: 1.25em 1em 0em;
+}
+.appContent {
+  min-height: 100vh;
+}
+.appHeader {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}

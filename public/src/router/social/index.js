@@ -1,3 +1,8 @@
 import React from "react"
-const Social = () => <div>Social Page...</div>
+import Layout from "../../components/Layout/"
+const Social = () => (
+  <Layout isHeader={true} isFooter={true}>
+    Social Page...
+  </Layout>
+)
 export default Social
