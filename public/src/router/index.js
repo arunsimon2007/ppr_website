@@ -5,15 +5,14 @@ import Contact from "./contact"
 import Gallery from "./gallery"
 import Home from "./home"
 import Social from "./social"
-import NoMatch from "./../components/nomatch"
-import Layout from "./../components/Layout"
+import NoMatch from "Components/nomatch"
 
 const routers = [
   { path: "/", component: Home },
   { path: "/gallery", component: Gallery },
   { path: "/contact", component: Contact },
   { path: "/social", component: Social },
-  { path: "/layout", component: Layout },
+
   { path: "*", component: NoMatch },
 ]
 

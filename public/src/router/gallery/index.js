@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 
 import * as actions from "../../redux/spinner/actions"
-import Layout from "../../components/Layout/"
+import Layout from "Components/Layout/"
 class Gallery extends Component {
   componentDidMount = () => {
     this.props.showSpinner()

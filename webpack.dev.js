@@ -23,6 +23,11 @@ module.exports = {
     path: BUILD_DIR,
     publicPath: "/",
   },
+  resolve: {
+    alias: {
+      Components: path.resolve(__dirname, "./public/src/components"),
+    },
+  },
   devServer: {
     contentBase: BUILD_DIR,
     index: "index.html",
