@@ -1,12 +1,15 @@
 .appLayout {
   position: relative;
   padding: 1.25em 1em 0em;
+  background-image: url("../../../static/img/rm111-wan-13_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .appContent {
   min-height: 100vh;
 }
 .appHeader {
-  position: -webkit-sticky; /* Safari */
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
