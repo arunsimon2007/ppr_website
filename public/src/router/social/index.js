@@ -29,90 +29,92 @@ const Social = () => {
   const classes = useStyles()
   return (
     <Layout isHeader={true} isFooter={true}>
-      <Typography
-        component="h1"
-        color="primary"
-        align="center"
-        className={classes.title}
-      >
-        SOCIAL MEDIA
-      </Typography>
-      <Grid
-        container
-        direction="row"
-        justify="center"
-        alignItems="center"
-        spacing={2}
-      >
-        <Grid item xs={2} />
-        <Grid item xs={2}>
-          <Card className={"cardRoot"}>
-            <CardContent>
-              <CardMedia
-                className={"cardMedia"}
-                image={Facebook}
-                title="Facebook"
-              ></CardMedia>
-              <Typography component="h2" align="center">
-                Likes : 00
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small" color="primary">
-                Follow
-              </Button>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-            </CardActions>
-          </Card>
+      <div className="socialContainer">
+        <Typography
+          component="h1"
+          color="primary"
+          align="center"
+          className={classes.title}
+        >
+          SOCIAL MEDIA
+        </Typography>
+        <Grid
+          container
+          direction="row"
+          justify="center"
+          alignItems="center"
+          spacing={2}
+        >
+          <Grid item xs={4} />
+          <Grid item xs={2}>
+            <Card className={"cardRoot"}>
+              <CardContent>
+                <CardMedia
+                  className={"cardMedia"}
+                  image={Facebook}
+                  title="Facebook"
+                ></CardMedia>
+                <Typography component="h2" align="center">
+                  Likes : 00
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small" color="primary">
+                  Follow
+                </Button>
+                <Button size="small" color="primary">
+                  Share
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          <Grid item xs={2}>
+            <Card className={"cardRoot"}>
+              <CardContent>
+                <CardMedia
+                  className={"cardMedia"}
+                  image={Instagram}
+                  title="Instagram"
+                ></CardMedia>
+                <Typography component="h2" align="center">
+                  Followers : 00
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small" color="primary">
+                  Follow
+                </Button>
+                <Button size="small" color="primary">
+                  Share
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          <Grid item xs={2}>
+            <Card className={"cardRoot"}>
+              <CardContent>
+                <CardMedia
+                  className={"cardMedia"}
+                  image={Twitter}
+                  title="Twitter"
+                ></CardMedia>
+                <Typography component="h2" align="center">
+                  Followers : 00
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small" color="primary">
+                  Follow
+                </Button>
+                <Button size="small" color="primary">
+                  Share
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          <Grid item xs={0} />
         </Grid>
-        <Grid item xs={2}>
-          <Card className={"cardRoot"}>
-            <CardContent>
-              <CardMedia
-                className={"cardMedia"}
-                image={Instagram}
-                title="Instagram"
-              ></CardMedia>
-              <Typography component="h2" align="center">
-                Followers : 00
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small" color="primary">
-                Follow
-              </Button>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item xs={2}>
-          <Card className={"cardRoot"}>
-            <CardContent>
-              <CardMedia
-                className={"cardMedia"}
-                image={Twitter}
-                title="Twitter"
-              ></CardMedia>
-              <Typography component="h2" align="center">
-                Followers : 00
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small" color="primary">
-                Follow
-              </Button>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item xs={2} />
-      </Grid>
+      </div>
     </Layout>
   )
 }

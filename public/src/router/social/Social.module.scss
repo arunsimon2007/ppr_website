@@ -4,3 +4,10 @@
 .socialTitle {
   padding: 1.25em;
 }
+.socialContainer {
+  height: 100vh;
+  background-image: url("../../../static/img/social_background.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom left;
+}

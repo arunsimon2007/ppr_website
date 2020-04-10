@@ -16,7 +16,7 @@ const Layout = (props) => {
     appLayout: {
       position: "relative",
       padding: "1.25em 1em 0em",
-      backgroundImage: location.pathname == "/" ? `url(${bgImage})` : `url(${socialBg})`,
+      backgroundImage: location.pathname == "/" ? `url(${bgImage})` : "",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
