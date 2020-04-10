@@ -26,6 +26,7 @@ module.exports = {
   resolve: {
     alias: {
       Components: path.resolve(__dirname, "./public/src/components"),
+      Static: path.resolve(__dirname, "./public/static"),
     },
   },
   devServer: {
