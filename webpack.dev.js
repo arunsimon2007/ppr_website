@@ -23,7 +23,9 @@ module.exports = {
     path: BUILD_DIR,
     publicPath: "/",
   },
+
   resolve: {
+    extensions: [".js", ".jsx"],
     alias: {
       Components: path.resolve(__dirname, "./public/src/components"),
       Static: path.resolve(__dirname, "./public/static"),

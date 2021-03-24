@@ -1,12 +1,10 @@
 .appLayout {
   position: relative;
-  padding: 1.25em 1em 0em;
-  background-image: url("../../../static/img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .appContent {
-  min-height: 100vh;
+    min-height: 100%;
 }
 .appHeader {
   position: -webkit-sticky;
